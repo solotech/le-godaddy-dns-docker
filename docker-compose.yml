@@ -2,12 +2,10 @@ version: "3.1"
 
 services:
   le-godaddy-dns:
-    image: "uschti/le-godaddy-dns"
+    image: "solotech/le-godaddy-dns"
     environment:
       GD_KEY: someMagicKey
       GD_SECRET: theCorrespondingSecret
-      SLACK_URL: https://hooks.slack.com/services/XXXXXXXXXXX
-      SLACK_DOMAIN_TITLE: yourdomain.com
     volumes:
       - /data/certs:/data/certs
       - /data/keys:/data/keys
