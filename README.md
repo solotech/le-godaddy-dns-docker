@@ -1,9 +1,7 @@
+#Focked from https://github.com/uschti/le-godaddy-dns-docker
 # Let's encrypt Godaddy DNS renew Docker container
 Renew your Let's encrypt certificate by using the DNS validation procedure.
 This Docker container works with the **Godaddy DNS API** and send a **Slack** notification with the execution result.
-
-**Slack notification example**
-![Slack Notification Example](./Slack_notification.png)
 
 ## Usage with docker-compose.yml
 ```
@@ -21,13 +19,11 @@ docker volume create cert-data
 ```
 docker container run --rm -e GD_KEY=someMagicKey \
  -e GD_SECRET=theCorrespondingSecret \
- -e SLACK_URL=https://hooks.slack.com/services/XXXXXXXXXXX \
- -e SLACK_DOMAIN_TITLE=yourdomain.com \
  -v /data/certs:/data/certs \
  -v /data/keys:/data/keys \
  -v renew_certificates.conf:/data/letsencrypt/renew_certificates.conf \
  -v cert-data:/data/letsencrypt/dehydrated/certs \
- uschti/le-godaddy-dns
+ solotech/le-godaddy-dns
 ```
 
 ## Input parameters explanation
