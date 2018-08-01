@@ -36,8 +36,6 @@ docker container run --rm -e GD_KEY=someMagicKey \
 - **GD_SECRET**:				Godaddy API Secret
 > Generate new Keys at: https://developer.godaddy.com/keys
 
-- **SLACK_URL**:				Slack incoming webhook URL
-- **SLACK_DOMAIN_TITLE**:		Slack title (to easily identify the domain)
 
 ### Volumes
 - **/data/certs**:				Folder where the created certificate will be copied (example of created file: yourdomain.com.crt)
