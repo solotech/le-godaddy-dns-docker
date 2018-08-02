@@ -23,7 +23,7 @@ docker container run --rm -e GD_KEY=someMagicKey \
  -v /data/keys:/data/keys \
  -v renew_certificates.conf:/data/letsencrypt/renew_certificates.conf \
  -v cert-data:/data/letsencrypt/dehydrated/certs \
- solotech/le-godaddy-dns
+ soloxb/le-godaddy-dns
 ```
 
 ## Input parameters explanation
